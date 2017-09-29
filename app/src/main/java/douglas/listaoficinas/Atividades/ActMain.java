@@ -1,4 +1,4 @@
-package douglas.listaoficinas;
+package douglas.listaoficinas.Atividades;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,7 +7,6 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.support.annotation.RequiresApi;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -17,21 +16,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.ArrayList;
 import java.util.List;
 
 import douglas.listaoficinas.Entidades.Oficina;
-import douglas.listaoficinas.CONSTANTES;
 import douglas.listaoficinas.Controles.ControleOficina;
+import douglas.listaoficinas.EnumMensagemErro;
+import douglas.listaoficinas.MensagemErro;
+import douglas.listaoficinas.OficinaAdapter;
+import douglas.listaoficinas.R;
 import douglas.listaoficinas.Util;
 
 public class ActMain extends AppCompatActivity {
@@ -68,6 +61,8 @@ public class ActMain extends AppCompatActivity {
 
 
         try {
+
+            ActMain.this.setTitle("Lista de Oficinas");
 
             final List<Oficina> lstOficina = ControleOficina.buscarOficinas();
             oficinaAdapter = new OficinaAdapter(lstOficina);

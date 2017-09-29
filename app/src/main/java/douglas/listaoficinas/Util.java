@@ -19,6 +19,13 @@ public class Util {
     }
 
 
+    public static boolean isNullOrEmpty(Object obj){
+
+        return (obj == null || obj == "");
+
+
+    }
+
     public static void setStrictMode() {
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();

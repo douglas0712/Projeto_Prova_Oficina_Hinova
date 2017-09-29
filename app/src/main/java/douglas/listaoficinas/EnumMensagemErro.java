@@ -10,15 +10,16 @@ public enum EnumMensagemErro {
     MENSAGEM_ERRO_CRIAR_LISTA_OFICINAS(6, "Erro criar a lista de Oficinas"),
     MENSAGEM_ERRO_LER_DADOS_API(7, "Erro ao ler dados da API"),
     MENSAGEM_ERRO_CONVERTER_API_EM_OBJ(8, "Erro ao converter os dados da API!"),
-    MENSAGEM_ERRO_FECHAR_CONEXAO(8, "Erro ao fechar conexão com API!"),
-    MENSAGEM_ERRO_PEGAR_DADOS_DO_JSON(8, "Erro ao pegar dados do json"),
-    MENSAGEM_ERRO_CONVERTER_INDICACAO_EM_JSON(8, "Erro ao converter indicacao em JSON"),
-    MENSAGEM_ERRO_ENVIAR_INDICACAO_API(8, "Erro ao enviar a indicacao para a API"),
-    MENSAGEM_ERRO_VERIFICAR_EXISTENCIA_ERROS_INDICACAO(8, "Erro ao verificar a existencia de erros no retorno da api Indicacao"),
-    MENSAGEM_ERRO_CONVERTER_RETORNO_API_INDICACAO_EM_OBJ(8, "Erro ao converter retorno da api indicacao em obj!"),
-    MENSAGEM_ERRO_LER_RETORNO_API_INDICACAO(8, "Ler retorno API indicacao!"),
-    MENSAGEM_ERRO_NO_SERVICO_INDICACAO(8, "Erro NO serviço de indicação!"),
-    MENSAGEM_ERRO_AO_FECHr_CONEXAO_API_INDICACAO(8, "Erro NO serviço de indicação!");
+    MENSAGEM_ERRO_FECHAR_CONEXAO(9, "Erro ao fechar conexão com API!"),
+    MENSAGEM_ERRO_PEGAR_DADOS_DO_JSON(10, "Erro ao pegar dados do json"),
+    MENSAGEM_ERRO_CONVERTER_INDICACAO_EM_JSON(11, "Erro ao converter indicacao em JSON"),
+    MENSAGEM_ERRO_ENVIAR_INDICACAO_API(12, "Erro ao enviar a indicacao para a API"),
+    MENSAGEM_ERRO_VERIFICAR_EXISTENCIA_ERROS_INDICACAO(13, "Erro ao verificar a existencia de erros no retorno da api Indicacao"),
+    MENSAGEM_ERRO_CONVERTER_RETORNO_API_INDICACAO_EM_OBJ(14, "Erro ao converter retorno da api indicacao em obj!"),
+    MENSAGEM_ERRO_LER_RETORNO_API_INDICACAO(15, "Ler retorno API indicacao!"),
+    MENSAGEM_ERRO_NO_SERVICO_INDICACAO(16, "Erro NO serviço de indicação!"),
+    MENSAGEM_ERRO_AO_FECHAR_CONEXAO_API_INDICACAO(17, "Erro NO serviço de indicação!"),
+    MENSAGEM_ERRO_PREENCHA_TODOS_OS_CAMPOS(18, "Preencha todos os campo");
 
 
 

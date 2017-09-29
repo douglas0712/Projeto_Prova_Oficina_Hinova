@@ -24,7 +24,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ActMain"
+            android:name=".Atividades.ActMain"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -34,11 +34,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ActOficina"
+            android:name=".Atividades.ActOficina"
             android:label="@string/title_activity_act_oficina"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ActCadIndicacao"
+            android:name=".Atividades.ActCadIndicacao"
             android:label="@string/title_activity_act_cad_indicacao"
             android:theme="@style/AppTheme.NoActionBar" />
         <!--
@@ -54,7 +54,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".ActMap"
+            android:name=".Atividades.ActMap"
             android:label="@string/title_activity_act_map"></activity>
     </application>
 

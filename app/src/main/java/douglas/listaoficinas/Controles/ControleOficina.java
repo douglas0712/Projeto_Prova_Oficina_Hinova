@@ -16,6 +16,8 @@ import douglas.listaoficinas.CONSTANTES;
 import douglas.listaoficinas.Entidades.Oficina;
 import douglas.listaoficinas.MensagemErro;
 import douglas.listaoficinas.EnumMensagemErro;
+import douglas.listaoficinas.Util;
+
 public class ControleOficina {
 
 
@@ -131,8 +133,15 @@ public class ControleOficina {
                 c.setAvaliacaoUsuario((Integer)array.getJSONObject(i).get("AvaliacaoUsuario"));
                 c.setCodigoAssociacao((Integer)array.getJSONObject(i).get("CodigoAssociacao"));
                 c.setEmail((String)array.getJSONObject(i).get("Email"));
-                // c.setTelefone1((String)array.getJSONObject(i).get("Telefone1"));
-                //c.setTelefone2((String)array.getJSONObject(i).get("Telefone2"));
+
+
+                if (Util.isNullOrEmpty(array.getJSONObject(i).get("Telefone1"))){
+                    c.setTelefone1((String)array.getJSONObject(i).get("Telefone1"));
+                }
+                if (Util.isNullOrEmpty(array.getJSONObject(i).get("Telefone2"))){
+                    c.setTelefone2((String)array.getJSONObject(i).get("Telefone2"));
+                }
+
                  c.setAtivo((Boolean) array.getJSONObject(i).get("Ativo"));
 
                 lstOficina.add(c);
@@ -148,5 +157,8 @@ public class ControleOficina {
 
         }
     }
+
+
+
 
 }

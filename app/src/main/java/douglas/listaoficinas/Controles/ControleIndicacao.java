@@ -1,8 +1,5 @@
 package douglas.listaoficinas.Controles;
 
-import android.widget.EditText;
-import android.widget.Toast;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -10,21 +7,13 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
 import java.net.URL;
-import java.net.URLConnection;
-import java.sql.Connection;
-import java.util.Date;
 
-import douglas.listaoficinas.ActCadIndicacao;
 import douglas.listaoficinas.CONSTANTES;
 import douglas.listaoficinas.Entidades.Indicacao;
 import douglas.listaoficinas.EnumMensagemErro;
 import douglas.listaoficinas.MensagemErro;
-import douglas.listaoficinas.R;
 import douglas.listaoficinas.Util;
 
 
@@ -90,7 +79,7 @@ public class ControleIndicacao {
         try {
             retornoApi.close();
         } catch (IOException e) {
-            throw  new MensagemErro(EnumMensagemErro.MENSAGEM_ERRO_AO_FECHr_CONEXAO_API_INDICACAO.getMsg());
+            throw  new MensagemErro(EnumMensagemErro.MENSAGEM_ERRO_AO_FECHAR_CONEXAO_API_INDICACAO.getMsg());
         }
 
 

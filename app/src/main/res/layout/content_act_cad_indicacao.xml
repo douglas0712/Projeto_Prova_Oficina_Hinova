@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="douglas.listaoficinas.ActCadIndicacao"
+    tools:context="douglas.listaoficinas.Atividades.ActCadIndicacao"
     tools:showIn="@layout/act_cad_indicacao">
 
     <LinearLayout
@@ -87,7 +87,7 @@
                 android:id="@+id/lblPlacaVeiculoAssociado"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="PlacaVeiculoAssociado" />
+                android:text="Placa Veiculo Associado" />
 
             <EditText
                 android:id="@+id/txtPlacaVeiculoAssociado"
@@ -140,7 +140,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#3e52b3"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
                 android:elevation="0dp"
                 android:onClick="onClickTeste"
                 android:text="Enviar Indicação" />

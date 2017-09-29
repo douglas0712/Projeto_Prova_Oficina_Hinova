@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#dedede"
-    tools:context="douglas.listaoficinas.ActMain">
+    tools:context="douglas.listaoficinas.Atividades.ActMain">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

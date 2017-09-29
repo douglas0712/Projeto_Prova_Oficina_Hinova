@@ -1,13 +1,10 @@
-package douglas.listaoficinas;
+package douglas.listaoficinas.Atividades;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Paint;
-import android.location.Geocoder;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Base64;
@@ -17,12 +14,7 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapView;
-
-import org.w3c.dom.Text;
-
-import douglas.listaoficinas.ActMain;
+import douglas.listaoficinas.R;
 
 public class ActOficina extends AppCompatActivity {
 

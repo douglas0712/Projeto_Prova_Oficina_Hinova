@@ -1,39 +1,33 @@
-package douglas.listaoficinas;
+package douglas.listaoficinas.Atividades;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.StrictMode;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLConnection;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
 
 import douglas.listaoficinas.Entidades.Indicacao;
-import douglas.listaoficinas.Entidades.Oficina;
 import douglas.listaoficinas.Controles.ControleIndicacao;
+import douglas.listaoficinas.EnumMensagemErro;
+import douglas.listaoficinas.MensagemErro;
+import douglas.listaoficinas.R;
+import douglas.listaoficinas.Util;
 
 public class ActCadIndicacao extends AppCompatActivity {
+
+    EditText txtCPFAssociado;
+    EditText txtEmailAssociado;
+    EditText txtNomeAssociado;
+    EditText txtTelefoneAssociado;
+    EditText txtPlacaVeiculo;
+    EditText txtNomeAmigo;
+    EditText txtTelefoneAmigo;
+    EditText txtEmailAmigo;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,17 +78,24 @@ public class ActCadIndicacao extends AppCompatActivity {
 
     public void onClickBtnEnviar() {
 
-        if (!validaCadastroIndicacao())
-            return;
-
-        Indicacao indicacao = criarObjIndicacao();
 
         try {
-            ControleIndicacao.processarEnvioDeIndicacao(indicacao);
 
-            Util.ExibirMensagemNaTela(ActCadIndicacao.this, "Sucesso ao Enviar Indicação!");
+            receberFormularioIndicacao();
 
-            abrirTelaPrincipal();
+            if (!validaCadastroIndicacao())
+                throw  new MensagemErro(EnumMensagemErro.MENSAGEM_ERRO_PREENCHA_TODOS_OS_CAMPOS.getMsg());
+
+
+                Indicacao indicacao = criarObjIndicacao();
+
+
+                ControleIndicacao.processarEnvioDeIndicacao(indicacao);
+
+                Util.ExibirMensagemNaTela(ActCadIndicacao.this, "Sucesso ao Enviar Indicação!");
+
+                abrirTelaPrincipal();
+
         } catch (MensagemErro mensagemErro) {
             Util.ExibirMensagemNaTela(ActCadIndicacao.this, mensagemErro.getMsg());
         }catch (Exception ex) {
@@ -114,8 +115,39 @@ public class ActCadIndicacao extends AppCompatActivity {
 
     public boolean validaCadastroIndicacao () {
 
+
+
+        if (txtCPFAssociado.getText().toString().equals(""))
+            return false;
+        if (txtEmailAssociado.getText().toString().equals(""))
+            return false;
+        if (txtNomeAssociado.getText().toString().equals(""))
+            return false;
+        if (txtTelefoneAssociado.getText().toString().equals(""))
+            return false;
+        if (txtPlacaVeiculo.getText().toString().equals(""))
+            return false;
+        if (txtNomeAmigo.getText().toString().equals(""))
+            return false;
+        if (txtTelefoneAmigo.getText().toString().equals(""))
+            return false;
+        if (txtEmailAmigo.getText().toString().equals(""))
+            return false;
+
+
         return true;
 
+    }
+
+    public void receberFormularioIndicacao() {
+        txtCPFAssociado = (EditText)findViewById(R.id.txtCpfAssociado);
+        txtEmailAssociado = (EditText)findViewById(R.id.txtEmailAssociado);
+        txtNomeAssociado = (EditText)findViewById(R.id.txtNomeAssociado);
+        txtTelefoneAssociado = (EditText)findViewById(R.id.txtTelefoneAssociado);
+        txtPlacaVeiculo = (EditText)findViewById(R.id.txtPlacaVeiculoAssociado);
+        txtNomeAmigo = (EditText)findViewById(R.id.txtNomeAmigo);
+        txtTelefoneAmigo = (EditText)findViewById(R.id.txtTelefoneAmigo);
+        txtEmailAmigo = (EditText)findViewById(R.id.txtEmailAmigo);
     }
 
 
