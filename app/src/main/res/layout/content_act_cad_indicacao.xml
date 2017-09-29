@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="douglas.listaoficinas.ActCadIndicacao"
+    tools:showIn="@layout/act_cad_indicacao">
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ScrollView
+        android:layout_width="372dp"
+        android:layout_height="511dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <TextView
+                android:id="@+id/lblCPFAssociado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CPF Associado"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="8dp" />
+
+            <EditText
+                android:id="@+id/txtCpfAssociado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/lblEmailAssociado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email Associado" />
+
+            <EditText
+                android:id="@+id/txtEmailAssociado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/lblNomeAssciado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nome Associado" />
+
+            <EditText
+                android:id="@+id/txtNomeAssociado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/lblTelefoneAssociado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Telefone Associado" />
+
+            <EditText
+                android:id="@+id/txtTelefoneAssociado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/lblPlacaVeiculoAssociado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PlacaVeiculoAssociado" />
+
+            <EditText
+                android:id="@+id/txtPlacaVeiculoAssociado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/lblNomeAmigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nome Amigo" />
+
+            <EditText
+                android:id="@+id/txtNomeAmigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/lblTelefoneAmigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Telefone Amigo" />
+
+            <EditText
+                android:id="@+id/txtTelefoneAmigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/lblEmalAmigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email Amigo" />
+
+            <EditText
+                android:id="@+id/txtEmailAmigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/btnEnviar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3e52b3"
+                android:textColor="#FFFFFF" />
+                android:elevation="0dp"
+                android:onClick="onClickTeste"
+                android:text="Enviar Indicação" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
