@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ListaOficinas.iml" filepath="$PROJECT_DIR$/ListaOficinas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Projeto_Prova_Oficina_Hinova.iml" filepath="$PROJECT_DIR$/Projeto_Prova_Oficina_Hinova.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
